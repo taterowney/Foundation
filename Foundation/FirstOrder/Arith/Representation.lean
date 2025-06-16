@@ -197,10 +197,10 @@ lemma sigma1_re (ε : ξ → ℕ) {k} {φ : Semiformula ℒₒᵣ ξ k} (hp : Hi
     · simp
   case hAnd =>
     intro n φ ψ _ _ ihp ihq
-    exact (ihp.and ihq).of_eq fun v ↦ by simp
+    exact RePred.and ihp ihq
   case hOr =>
     intro n φ ψ _ _ ihp ihq
-    exact (ihp.or ihq).of_eq fun v ↦ by simp
+    exact RePred.or ihp ihq
   case hBall =>
     intro n t φ _ ih
     rcases RePred.iff'.mp ih with ⟨f, hf, H⟩

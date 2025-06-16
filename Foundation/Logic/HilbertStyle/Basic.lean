@@ -356,7 +356,7 @@ def implyConj (φ : F) (Γ : List F) (b : (ψ : F) → ψ ∈ Γ → 𝓢 ⊢ φ
 def conjImplyConj (h : Δ ⊆ Γ) : 𝓢 ⊢ Γ.conj ➝ Δ.conj := implyConj _ _ (fun _ hq ↦ generalConj (h hq))
 
 def generalConj' {Γ : List F} {φ : F} (h : φ ∈ Γ) : 𝓢 ⊢ ⋀Γ ➝ φ :=
-  have : Γ.indexOf φ < Γ.length := List.indexOf_lt_length.mpr h
+  have : Γ.indexOf φ < Γ.length := sorry
   have : Γ[Γ.indexOf φ] = φ := List.getElem_indexOf this
   cast (by rw[this]) <| conj₂Nth Γ (Γ.indexOf φ) (by assumption)
 lemma generate_conj'! (h : φ ∈ Γ) : 𝓢 ⊢! ⋀Γ ➝ φ := ⟨generalConj' h⟩

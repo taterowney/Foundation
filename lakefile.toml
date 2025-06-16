@@ -7,7 +7,7 @@ linter.flexible = true
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-version = "git#master"
+rev = "5269898d6a51d047931107c8d72d934d8d5d3753"
 
 [[lean_lib]]
 name = "Foundation"
