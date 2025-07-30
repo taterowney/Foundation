@@ -10,5 +10,3 @@ import Foundation.Modal.Kripke.Geach.Systems
 import Foundation.Modal.Kripke.Ver
 import Foundation.Modal.Kripke.Dot3
 import Foundation.Modal.Kripke.S5
-import Foundation.Modal.Kripke.GL.GL
-import Foundation.Modal.Kripke.Grz.Grz

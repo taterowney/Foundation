@@ -164,8 +164,8 @@ structure Model (α) where
   Frame : Frame
   Valuation : Valuation Frame α
 
-abbrev Model.World (M : Model) := M.Frame.World
-instance : CoeSort (Model) (Type u) := ⟨Model.World⟩
+-- abbrev Model.World (M : Model) := M.Frame.World
+-- instance : CoeSort (Model) (Type u) := ⟨Model.World⟩
 
 
 section Classical
@@ -192,9 +192,9 @@ end ClassicalFrame
 
 abbrev ClassicalValuation (α : Type*) := α → Prop
 
-abbrev ClassicalModel (V : ClassicalValuation α) : Kripke.Model where
-  Frame := ClassicalFrame
-  Valuation _ a := V a
+-- abbrev ClassicalModel (V : ClassicalValuation α) : Kripke.Model where
+--   Frame := ClassicalFrame
+--   Valuation _ a := V a
 
 end Classical
 
